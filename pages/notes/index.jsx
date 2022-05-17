@@ -11,11 +11,9 @@ export default ({notes}) => {
         {notes.map(note => (
           <div sx={{width: '33%', p: 2}} key={note.id}>
             <Link href="/notes/[id]" as={`/notes/${note.id}`}>
-              <a sx={{textDecoration: 'none', cursor: 'pointer'}}>
-                <div sx={{variant: 'containers.card',}}>
+                <div sx={{variant: 'containers.card',cursor: 'pointer',textDecoration: 'none',}}>
                   <strong>{note.title}</strong>
                 </div>
-              </a>
             </Link>
           </div>
         ))}
